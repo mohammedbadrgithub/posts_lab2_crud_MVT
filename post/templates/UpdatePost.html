@@ -1,0 +1,43 @@
+
+{%  extends 'base.html' %}
+
+{% block title %} Update Post {% endblock %}
+
+    {% block content %}   
+
+<div class="container text-light">
+    <form method="POST"  >
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Title</label>
+          <input type="text" class="form-control" name="title" value="{{post.title}}" id="exampleInputEmail1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail2" class="form-label">Body</label>
+            <input type="text" class="form-control" name="body" value="{{post.body}}"  id="exampleInputEmail2">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail3" class="form-label">Description</label>
+            <input type="text" class="form-control" name="description" value="{{post.description}}"  id="exampleInputEmail3">
+          </div>
+        <button type="submit" class="btn btn-outline-light w-25 mx-auto">Update</button>
+      </form>
+</div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

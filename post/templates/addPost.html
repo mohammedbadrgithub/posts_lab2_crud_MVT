@@ -1,0 +1,51 @@
+
+{%  extends 'base.html' %}
+
+{% block title %} Add New Post {% endblock %}
+
+    {% block content %}   
+
+<div class="container text-light">
+    <form method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Title</label>
+          <input type="text" class="form-control" name="title" id="exampleInputEmail1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail2" class="form-label">Body</label>
+            <input type="text" class="form-control" name="body"  id="exampleInputEmail2">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail3" class="form-label">Description</label>
+            <input type="text" class="form-control" name="description"   id="exampleInputEmail3">
+          </div>
+          <div class="mb-3 ">
+            <label for="cat" class="form-label">Category</label>
+          <select name="category" class="form-control" id="cat">
+            {% for cat in category %}
+                <option value="{{cat.id}}">{{cat.cateoryName}}</option>
+            {% endfor %}
+          </select></div>
+    
+        <button type="submit" class="btn btn-outline-light w-25 mx-auto">Add New Post</button>
+      </form>
+</div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

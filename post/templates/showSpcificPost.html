@@ -1,0 +1,54 @@
+
+{%  extends 'base.html' %}
+
+{% block title %} {{post.title}} {% endblock %}
+
+    {% block nav %}Home{% endblock %}{% block link %}{% endblock %}
+
+
+    {% block content %} 
+
+    <div class="container mt-5 text-light">
+        <h1 class="fw-bolder text-light mb-4">{{post.title}}</h1>
+    </div>
+    <div class="container text-light">
+        <div class="row">
+            <table class="table table-striped text-light">
+                <thead>
+                    <tr class="text-light">
+                      <th scope="col">Title</th>
+                      <th scope="col">Body</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Create Time</th>
+                      <th scope="col">Category</th>
+
+
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-light">
+                   
+                      <td>{{post.title}} </td>
+                      <td>{{post.body}} </td>
+                      <td>{{post.description}}</td>
+                      <td>{{post.created_at}}</td>
+                      <td>{{post.category_id}}</td>
+
+
+                      
+                      
+                      
+                      
+                    </tr>
+                  </tbody>
+                  
+                </table>
+                <div class="col-lg-3 col-md-4">
+                  <!-- <img src="static/image/{{ post.image | default('image.png') }}"  /> -->
+                </div>
+
+      </div>
+    </div>
+    {% endblock %}

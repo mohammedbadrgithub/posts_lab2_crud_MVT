@@ -1,0 +1,16 @@
+
+{%  extends 'base.html' %}
+
+{% block title %} Database Products {% endblock %}
+
+    {% block nav %}Home{% endblock %}
+
+
+    {% block content %} 
+    <div class="container ">
+        <div class="row">
+        {% import 'macros.html' as post %}
+        {{post.render_Full_Object(posts)}}
+    </div>
+    </div>
+    {% endblock %}

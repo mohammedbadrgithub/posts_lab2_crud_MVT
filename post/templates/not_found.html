@@ -1,0 +1,12 @@
+{%  extends 'base.html' %}
+
+{% block title %} Not Found {% endblock %}
+
+    {% block content %} 
+    <div class="container text-center">
+        <div style="height: 100vh;width: 100wh;">
+
+            <img src="{{ url_for('static', filename='images/notfound.png') }}" alt="Not Found">
+        </div>
+    </div>
+    {% endblock %}

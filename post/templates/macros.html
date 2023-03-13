@@ -1,0 +1,18 @@
+{% macro render_Full_Object(posts) %}
+    {% for post in posts %}
+    <div class="col-lg-3 col-md-4 my-3">
+        
+        <div class="card  rounded-3 text-center h-100" style="box-shadow:5px 5px 5px gray">
+            <h3 class="card-title p-2 fw-bolder">{{post.title}}</h3>
+            <h5 class="card-title p-2 fw-bolder">{{post.description}}</h5>
+            <!-- <img src="{{ url_for('static', filename='images/post.image') }}" class="card-img-top p-4 rounded-3" height="250px" alt="Post"> -->
+            <div class="card-body">
+             <a class="btn btn-outline-info" href="{{ url_for('posts.post_details', id=post.id) }}">Show</a>
+             <a class="btn btn-outline-secondary" href="{{ url_for('posts.edit', id=post.id) }}">Update</a>
+             <a class="btn btn-outline-danger " href="{{ url_for('posts.post_delete', id=post.id) }}">Delete</a>
+            </div>
+        </div>
+    </div>    
+    {% endfor %}
+
+{% endmacro %}
